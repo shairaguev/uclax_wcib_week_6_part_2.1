@@ -26,8 +26,12 @@ a:hover {
 
 html,
 body {
+  background:url(../images/galaxy4.jpg);
+  background-position: center;
+
   height: 100%;
   background-color: #333;
+  font-family: 'Amatic SC', cursive;
 }
 
 body {
@@ -103,4 +107,54 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+.h1, h1 {
+    font-size: 5rem;
+}
+
+p {
+  font-size: 25px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #755b7d;
+    border-color: #755b7d;
+}
+
+.form-control{
+      border: 1px solid #4b3f4f;
+      font-size: 24px;
+}
+
+.form-group{
+  font-size: 24px;
+}
+
+.btn{
+  font-size: 24px;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #ac88b0;
+    border-color: #ac88b0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    color: #d0b8e0;
+}
+
+button {
+    border-radius: 0;
+    background-color: #ac88b0;
+    color: white;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #4b3f4f;
+    border-color: #4b3f4f;
 }
