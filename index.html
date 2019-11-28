@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Guessing Game</title>
+    <title>Beverage</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,49 +16,209 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900&display=swap" rel="stylesheet">
   </head>
 
-  <body class="text-center">
+  <body>
+    <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="#" aria-label="Product">
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand">Guess The Number</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="#">Home</a>
-          </nav>
+    </a>
+    <a class="py-2" href="#">
+      <img src="images/bean.png" height = "24" width="24">
+
+    <a class="py-2 d-none d-md-inline-block" href="#">Gift Cards</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Coffee</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Tea</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Cafe Menu</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Tools</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Rewards</a>
+
+  </div>
+</nav>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center" style="
+    background-color: #fff6e9;">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal">10% OFF</h1>
+    <p class="lead font-weight-normal">Register and claim your early Christmas treat</p>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  CLAIM NOW
+</button>
+  </div>
+  <div class="product-device shadow-sm d-none d-md-block">
+    <img class = "mainbanner" src= "images/header1.png" >
+     </div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block">
+      <img class = "mainbanner" src= "images/header2.jpg" >
+     </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CLAIM YOUR CHRISTMAS TREAT BY SIGNING UP BELOW!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+<!-- Modal Body Form -->
+<div class="modal-body">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="firstName">First Name</label>
+        <input type="firstName" class="form-control" id="inputFirstName" placeholder="First Name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="lastName">Last Name</label>
+        <input type="lastName" class="form-control" id="inputLastName" placeholder="Last Name">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
         </div>
-      </header>
-
-      <main role="main" class="inner cover">
-
-        <h1 class="cover-heading">Number guessing game</h1>
-
-        <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
-
-        <div class="form">
-          <div class="form-group">
-            <label for="guessField">Enter a guess:</label>
-            <input type="text" class="form-control guessField" id="guessField" aria-describedby="emailHelp" placeholder="Enter a guess">
-          </div>
-          <input type="submit" value="Submit guess" class="btn btn-primary guessSubmit">
-        </div>
-
-        <div class="resultParas">
-          <p class="guesses"></p>
-          <p class="lastResult"></p>
-          <p class="lowOrHi"></p>
-        </div>
-
-      </main>
-
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, design by <a href="https://twitter.com/mdo">@shiaraguev</a>.</p>
-        </div>
-      </footer>
+      </div>
     </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <button type="button" class="btn btn-primary claim" data-dismiss="modal" data-toggle="modal" id = "claim" data-target="#congrats">Claim</button>
+</div>
+</div>
+</div>
+</div>
 
-	</body>
+<!-- Modal Congratulations -->
+<div class="modal fade" id="congrats" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title congratulations" id="congratulations">Congratulations! Here is your Christmas treat!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1>10% OFF </h1>
+        <p> on your next online order <br> and a free bag of our most famous bean! </p>
+        <div>
+        <img class= "beans" src="images/bagofbeans1.jpg">
+      </div>
+
+      <div>
+          <p>And there's more!...Are you a coffee or a tea person?<p>
+          </div>
+
+          <div>
+            <label for="coffee">coffee</label><input id="coffee" type="radio" name="teacoffee" value="coffee" checked>
+            <label for="tea">tea</label><input id="tea" type="radio" name="teacoffee" value="tea">
+          </div>
+          <p class="story"></p>
+          <div class="image">
+            <img id="imagesource">
+          </div>
+          <div>
+  <button class="randomize">Claim</button>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="randomize" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+    <div class="my-3 py-3">
+      <h2 class="display-5">Shop Coffee</h2>
+      <p class="lead">Ground and whole coffee bean</p>
+    </div>
+    <img class = "image1" src = "images/image1.jpg" href ="#" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;" >
+  </div>
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Shop Tea</h2>
+      <p class="lead">Black, herbal, and green tea</p>
+    </div>
+    <img class = "image2" src = "images/image2.jpg" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;" >
+  </div>
+</div>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Recipes</h2>
+      <p class="lead">Over 50 yummy recipes to indulge with</p>
+    </div>
+    <img class = "image3" src = "images/image3.jpg" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;" >
+  </div>
+  <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+    <div class="my-3 py-3">
+      <h2 class="display-5">Who We Are</h2>
+      <p class="lead">We do coffeee and tea differently</p>
+    </div>
+    <img class = "image4" src = "images/image4.jpg" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;" >
+  </div>
+</div>
+
+
+
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <img src="images/beancolored.png">
+
+      <small class="d-block mb-3 text-muted">&copy; 2017-2019</small>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Our Company</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Careers</a></li>
+        <li><a class="text-muted" href="#">For Business</a></li>
+        <li><a class="text-muted" href="#">Franchising</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Social Impact</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Ethical Sourcing</a></li>
+        <li><a class="text-muted" href="#">Recycable Materials</a></li>
+        <li><a class="text-muted" href="#">Sustainability</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Ways To Order</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Web</a></li>
+        <li><a class="text-muted" href="#">App</a></li>
+        <li><a class="text-muted" href="#">Delivery</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About Us</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Team</a></li>
+        <li><a class="text-muted" href="#">Locations</a></li>
+        <li><a class="text-muted" href="#">History</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+    <script src="js/scripts.js"></script>
+</body>
 
 </html>
