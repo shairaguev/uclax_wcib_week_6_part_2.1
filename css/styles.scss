@@ -186,3 +186,38 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+
+body .modal-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-left: auto;
+    /* margin-right: auto; */
+}
+
+body .congratsNote{
+    text-align: center;
+    color: #3f8051;
+    font-weight: 700;
+
+}
+
+.radio {
+    text-align: center;
+}
+
+.randomize {
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #DBCCB5;
+    color: #743233;
+}
+
+.holidays {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+  }
